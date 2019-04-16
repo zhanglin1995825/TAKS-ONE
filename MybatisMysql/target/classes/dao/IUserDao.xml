@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IUserDao">
+    <!--查询所有-->
+<!--    <select id="getAll" resultType="entity.User">
+        select * from student
+    </select>-->
+    <select id="getAll" resultType="entity.User" >
+        select * from student
+        <where>
+            <if test="id!=null">
+            <if test="id!=0">
+                and id = #{id}
+            </if>
+            </if>
+            <if test="name!=null">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+    <!--新增学生-->
+    <insert id="addUser">
+       insert  into student(name) value(#{name})
+    </insert>
+    <delete id="deleate">
+       delete from student where id=#{id}
+    </delete>
+    <update id="update">
+       update student set name=#{name} where id=#{id}
+    </update>
+</mapper>
