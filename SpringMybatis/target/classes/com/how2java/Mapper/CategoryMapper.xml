@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.how2java.Mapper.CategoryMapper">
+    <insert id="add" parameterType="com.how2java.pojo.Category" >
+            insert into student ( name ) values (#{name})
+        </insert>
+
+    <delete id="delete" parameterType="com.how2java.pojo.Category" >
+            delete from student where id= #{id}
+        </delete>
+
+    <select id="get" parameterType="_int" resultType="com.how2java.pojo.Category">
+            select * from   student where id= #{id}
+        </select>
+
+    <update id="update" parameterType="com.how2java.pojo.Category" >
+            update student set name=#{name} where id=#{id}
+        </update>
+    <select id="list" resultType="com.how2java.pojo.Category">
+            select * from   student
+        </select>
+</mapper>
