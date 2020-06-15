@@ -8,7 +8,7 @@
     <artifactId>SpringMybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <spring.version>4.0.3.RELEASE</spring.version>
+        <spring.version>5.2.7.RELEASE</spring.version>
     </properties>
     <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
     <dependencies>
